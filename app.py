@@ -107,7 +107,7 @@ if user_input and st.session_state.vector_store:
     with st.chat_message("user"):
         st.markdown(user_input)
 
-    llm = ChatGroq(groq_api_key=GROQ_API_KEY, model_name="llama-3.3-70b-versatile")
+    llm = ChatGroq(groq_api_key=GROQ_API_KEY, model_name="openai/gpt-oss-120b")
 
     system_prompt = f"""
     You are PRISM, an expert academic mentor for NEET Biology. 
