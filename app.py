@@ -8,6 +8,7 @@ from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate
 from langchain.chains import create_retrieval_chain
 from langchain.chains.combine_documents import create_stuff_documents_chain
+
 # --- 1. Sleek UI Configuration ---
 st.set_page_config(
     page_title="PRISM | AI Mentorship Platform", 
@@ -28,7 +29,6 @@ st.title("💠 PRISM: Intelligent Student Mentorship Platform")
 st.caption("Personalized Reasoning & Intelligent Student Mentorship | Full NCERT Corpus Loaded")
 
 # --- 2. Configuration ---
-# Make sure your .streamlit/secrets.toml file contains your GROQ_API_KEY
 GROQ_API_KEY = st.secrets["GROQ_API_KEY"]  
 PDF_DIRECTORY = "pdfs"
 DB_DIRECTORY = "chroma_storage"
@@ -60,11 +60,9 @@ if "messages" not in st.session_state:
 def initialize_database():
     embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
     
-    # 1. If database exists, load it instantly from the hard drive
     if os.path.exists(DB_DIRECTORY) and os.listdir(DB_DIRECTORY):
         return Chroma(persist_directory=DB_DIRECTORY, embedding_function=embeddings)
     
-    # 2. If it does not exist, read the PDFs using the heavy-duty PyMuPDFLoader
     all_chunks = []
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
     
@@ -79,7 +77,6 @@ def initialize_database():
             all_chunks.extend(chunks)
         
         if all_chunks:
-            # Save the data permanently to the chroma_storage folder
             vector_store = Chroma.from_documents(
                 all_chunks, 
                 embeddings, 
@@ -89,7 +86,6 @@ def initialize_database():
             
     return None
 
-# Trigger the caching function
 if "vector_store" not in st.session_state:
     with st.spinner("Connecting to PRISM Memory Core... Please wait ⏳"):
         st.session_state.vector_store = initialize_database()
@@ -111,7 +107,8 @@ if user_input and st.session_state.vector_store:
     with st.chat_message("user"):
         st.markdown(user_input)
 
-   llm = ChatGroq(groq_api_key=GROQ_API_KEY, model_name="llama-3.3-70b-versatile")
+    llm = ChatGroq(groq_api_key=GROQ_API_KEY, model_name="llama-3.3-70b-versatile")
+
     system_prompt = f"""
     You are PRISM, an expert academic mentor for NEET Biology. 
     The student's target mastery tier is: {student_level}.
