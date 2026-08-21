@@ -143,7 +143,7 @@ if user_input and st.session_state.vector_store:
     rag_chain = create_retrieval_chain(retriever, qa_chain)
 
     with st.chat_message("assistant"):
-        with st.spinner("Analyzing across 25 NCERT chapters..."):
+        with st.spinner("Analyzing across 32 NCERT chapters..."):
             response = rag_chain.invoke({"input": user_input})
             answer = response["answer"]
             st.markdown(answer)
