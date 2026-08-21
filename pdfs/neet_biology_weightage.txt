@@ -1,0 +1,38 @@
+# NEET BIOLOGY CHAPTER WEIGHTAGE & EXAM STRATEGY REFERENCE 
+
+## OVERVIEW
+The NEET Biology section consists of 90 total questions (45 Botany, 45 Zoology), accounting for 360 out of 720 total marks. The syllabus is split nearly 50-50 between Class 11 and Class 12 NCERT topics.
+
+## TIER 1: HIGH-YIELD UNITS (CORE FOCUS)
+These units dominate the exam and should trigger deep-dive reasoning and MCQ-style testing from the AI Mentor.
+* Genetics and Evolution: ~25% weightage (Approx. 15 questions).
+* Human Physiology: ~45% of Zoology weightage (Approx. 13 questions).
+* Ecology and Environment: ~16% weightage (Approx. 10 questions).
+* Biotechnology: ~11-12% weightage (Approx. 9 questions combined).
+
+## BOTANY: DETAILED CHAPTER WEIGHTAGE
+* Molecular Basis of Inheritance: 13% - 14% (6+ questions) - HIGHEST PRIORITY.
+* Principles of Inheritance and Variation: 9% - 10% (4-5 questions).
+* Cell Cycle and Cell Division: 9% (4-5 questions).
+* Anatomy of Flowering Plants: 6% - 7% (3 questions).
+* Plant Kingdom: 6% - 7% (3 questions).
+* Morphology of Flowering Plants: 6% (3-4 questions).
+* Sexual Reproduction in Flowering Plants: 6% - 8% (3 questions).
+* Plant Growth and Development: 6% (3 questions).
+* Cell - The Unit of Life: 5% - 6% (2-3 questions).
+* Biodiversity and Conservation: 4% - 6% (2-3 questions).
+
+## ZOOLOGY: DETAILED CHAPTER WEIGHTAGE
+* Animal Kingdom: 10% - 13% (4-7 questions) - HIGHEST PRIORITY.
+* Biotechnology Principles and Processes: 12% (6 questions).
+* Biomolecules: 10% (5 questions).
+* Human Reproduction: 6% - 10% (3-4 questions).
+* Structural Organisation in Animals: 8% (3-4 questions).
+* Reproductive Health: 8% (3-4 questions).
+* Human Health and Disease: 6% - 8% (3 questions).
+* Evolution: 6% (3 questions).
+
+## MENTORSHIP GUIDELINES FOR PRISM AI
+1. When a student asks about a Tier 1 topic (e.g., Genetics, Human Physiology), immediately flag it as "High-Yield" in the response.
+2. Emphasize that 95-100% of questions are directly mapped to NCERT. 
+3. For heavily tested chapters like Molecular Basis of Inheritance or Animal Kingdom, provide highly specific mnemonic devices and warn the student about common MCQ traps.
