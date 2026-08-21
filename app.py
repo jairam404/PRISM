@@ -6,9 +6,8 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Chroma
 from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate
-from langchain_classic.chains import create_retrieval_chain
-from langchain_classic.chains.combine_documents import create_stuff_documents_chain
-
+from langchain.chains import create_retrieval_chain
+from langchain.chains.combine_documents import create_stuff_documents_chain
 # --- 1. Sleek UI Configuration ---
 st.set_page_config(
     page_title="PRISM | AI Mentorship Platform", 
@@ -112,8 +111,7 @@ if user_input and st.session_state.vector_store:
     with st.chat_message("user"):
         st.markdown(user_input)
 
-    llm = ChatGroq(groq_api_key=GROQ_API_KEY, model_name="openai/gpt-oss-120b")
-
+   llm = ChatGroq(groq_api_key=GROQ_API_KEY, model_name="llama-3.3-70b-versatile")
     system_prompt = f"""
     You are PRISM, an expert academic mentor for NEET Biology. 
     The student's target mastery tier is: {student_level}.
