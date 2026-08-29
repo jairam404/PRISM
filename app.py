@@ -88,7 +88,7 @@ if app_mode == "AI Academic Mentor (RAG)":
             
             # Cleanly formatted system prompt
             system_prompt = (
-                f"You are PRISM, an elite academic mentor for NEET/JEE. "
+                f"You are PRISM, an elite academic mentor for NEET. "
                 f"Current Subject: {selected_subject}. "
                 "Use the provided context as the absolute source of truth. "
                 "Context: {context}"
