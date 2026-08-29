@@ -4,10 +4,16 @@ import streamlit as st
 import subprocess
 import sys
 import time
+import streamlit as st
 
-# Force start the FastAPI backend in the background
-subprocess.Popen([sys.executable, "-m", "uvicorn", "backend:app", "--host", "0.0.0.0", "--port", "8000"])
-time.sleep(2) # Give the server a moment to spin up
+@st.cache_resource
+def start_backend():
+    # Starts FastAPI only once and keeps it running in the background
+    process = subprocess.Popen([sys.executable, "-m", "uvicorn", "backend:app", "--host", "127.0.0.1", "--port", "8000"])
+    time.sleep(3) # Wait for the server to boot
+    return process
+
+start_backend()
 from langchain_community.document_loaders import PyMuPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings
